@@ -8,7 +8,7 @@ import {Course} from './model/course';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  courses = COURSES[0];
+  courses = COURSES;
 
   onCourseSelected(course:Course){
     console.log("App component - click event bubbled...", course);

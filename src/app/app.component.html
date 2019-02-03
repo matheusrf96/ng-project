@@ -4,6 +4,18 @@
 </div>
 
 <div class="courses">
-    <course-card (courseSelected)="onCourseSelected($event)" [course]="courses">
+    <course-card *ngFor="let item of courses;
+                        index as i;
+                        first as isFirst;
+                        last as isLast;
+                        even as isEven;
+                        odd as isOdd"
+                (courseSelected)="onCourseSelected($event)"
+                [class.is-first]="isFirst"
+                [class.is-last]="isLast"
+                [class.is-even]="isEven"
+                [class.is-odd]="isOdd"
+                [course]="item"
+                [cardIndex]="i + 1">
     </course-card>
 </div>
