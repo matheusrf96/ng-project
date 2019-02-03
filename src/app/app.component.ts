@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {COURSES} from '../db-data';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +8,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  data = {
-    title: 'Angular Project',
-    click: 0
-  }
-  
-  onLogoClicked(){
-    this.data.click++;
-  }
-
-  onKeyUp(newClick: string){
-    this.data.title = newClick;
-  }
 }
