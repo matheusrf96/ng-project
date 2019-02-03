@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-project';
+
+  data = {
+    title: 'Angular Project',
+    click: 0
+  }
+  
+  onLogoClicked(){
+    this.data.click++;
+  }
+
+  onKeyUp(newClick: string){
+    this.data.title = newClick;
+  }
 }
