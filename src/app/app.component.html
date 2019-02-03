@@ -4,5 +4,6 @@
 </div>
 
 <div class="courses">
-    <course-card></course-card>
+    <course-card (courseSelected)="onCourseSelected($event)" [course]="courses">
+    </course-card>
 </div>

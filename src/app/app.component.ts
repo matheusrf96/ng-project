@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {COURSES} from '../db-data';
+import {Course} from './model/course';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,9 @@ import {COURSES} from '../db-data';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  courses = COURSES[0];
 
+  onCourseSelected(course:Course){
+    console.log("App component - click event bubbled...", course);
+  }
 }
