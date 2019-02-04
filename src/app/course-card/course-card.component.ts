@@ -10,7 +10,7 @@ export class CourseCardComponent implements OnInit {
 
   @Input()
   course: Course;
-
+  
   @Input()
   cardIndex: number;
 
@@ -41,6 +41,12 @@ export class CourseCardComponent implements OnInit {
     }
     else if(this.course.category === 'ADVANCED'){
       return ['advanced'];
+    }
+  }
+
+  cardStyles(){
+    return {
+      'color': '#333'
     }
   }
 }
