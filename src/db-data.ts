@@ -1,11 +1,14 @@
+
+
 export const COURSES: any = [
+
     {
         id: 1,
         description: "Angular Core Deep Dive",
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png',
         longDescription: "A detailed walk-through of the most important part of Angular - the Core and Common modules",
-        category: 'INTERMEDIATE',
-        lessonsCount: 10
+        lessonsCount: 10,
+        category: 'INTERMEDIATE'
     },
     {
         id: 2,
@@ -43,7 +46,7 @@ export const COURSES: any = [
     {
         id: 6,
         description: 'Angular PWA Course',
-        longDescription: "<p class='course-description'>Learn Angular Progressive Web Applications, build the future of the Web Today.",
+        longDescription: "Learn Angular Progressive Web Applications, build the future of the Web Today.",
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-pwa-course.png',
         category: 'ADVANCED',
         lessonsCount: 8
@@ -75,11 +78,11 @@ export const COURSES: any = [
         iconUrl: "https://s3-us-west-1.amazonaws.com/angular-university/course-images/material_design.png",
         longDescription: "Build Applications with the official Angular Widget Library",
         category: 'ADVANCED'
-    },
-    undefined,
+    }
+
 ];
 
 
 export function findCourseById(courseId:number) {
-    return COURSES.find(course => course.id === courseId);
+    return COURSES.find(course => course.id == courseId);
 }
